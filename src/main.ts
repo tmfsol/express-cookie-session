@@ -35,7 +35,7 @@ const bootstrap = async () => {
 	app.use(express.static(path.join(path.resolve(), 'public')));
 
 	// Set middlewares
-	app.use(express.urlencoded({ extended: true }));
+	app.use(express.urlencoded({ extended: true })); // Handle cho hành động submit form mặc định của HTML bằng action, check file views/auth/login.ejs
 	app.use(cookieParser(getEnv('COOKIE_SECRET_KEY')));
 
 	app.use(
